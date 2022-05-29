@@ -1,0 +1,36 @@
+---
+title: Вход
+stylesheets: 
+    - ../../styles/fonts.scss
+    - ../../styles/global.scss
+    - ../../styles/form.scss
+buttonText: Войти
+linkText: Еще не зарегистрированы?
+linkHref: ../register/register.hbs
+---
+
+{{!< base}}
+
+<main class="container container_position_center">
+    {{#> form title=title buttonText=buttonText linkText=linkText linkHref=linkHref}}
+        {{> 
+            input 
+            label="Логин"
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="login"
+            required=true
+        }}
+        {{> 
+            input 
+            label="Пароль" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="password"
+            required=true
+            type="password"
+        }}
+    {{/form}}
+</main>

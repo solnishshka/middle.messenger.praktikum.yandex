@@ -1,0 +1,83 @@
+---
+title: Регистрация
+stylesheets: 
+    - ../../styles/fonts.scss
+    - ../../styles/global.scss
+    - ../../styles/form.scss
+    - ./register.scss
+buttonText: Создать аккаунт
+linkText: Уже есть аккаунт? Войти
+linkHref: ../login/login.hbs
+---
+
+{{!< base}}
+
+<main class="container  container_position_center">
+    {{#> form title=title buttonText=buttonText linkText=linkText linkHref=linkHref}}
+        {{> 
+            input 
+            label="Почта" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="email"
+            required=true
+        }}
+        {{> 
+            input 
+            label="Логин" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="login"
+            required=true
+        }}
+        {{> 
+            input 
+            label="Имя" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="first_name"
+            required=true
+        }}
+        {{> 
+            input 
+            label="Фамилия" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="second_name"
+            required=true
+        }}
+        {{> 
+            input 
+            label="Телефон" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="phone"
+            required=true
+        }}
+        {{> 
+            input 
+            label="Пароль" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="oldPassword"
+            required=true
+            type="password"
+        }}
+        {{> 
+            input 
+            label="Пароль (еще раз)" 
+            containerClasses="form__item" 
+            inputClasses="form__input" 
+            labelClasses="form__label"
+            name="newPassword"
+            required=true
+            type="password"
+        }}
+    {{/form}}
+</main>
