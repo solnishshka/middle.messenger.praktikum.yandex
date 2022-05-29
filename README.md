@@ -5,7 +5,7 @@
 
 ## Ссылка на развернутый проект
 
-![Превью проекта](https://benevolent-fairy-61ee2e.netlify.app/)
+[Превью проекта](https://benevolent-fairy-61ee2e.netlify.app/)
 
 ## Описание
 
@@ -15,7 +15,7 @@ MVP учебного проекта Веб-мессенжер. Проект пр
 
 Макет и само приложение еще будут дорабатываться. Также в планах есть задача по написанию собственной реализации шаблонизатора вместо используемого сейчас Handlebars.
 
-![Фигма](https://www.figma.com/file/C3IyyuTQjwcUAdD3k9XZiW/WEB-MESSENGER)
+[Фигма](https://www.figma.com/file/C3IyyuTQjwcUAdD3k9XZiW/WEB-MESSENGER)
 
 ## Технологии в проекте
 
