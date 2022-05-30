@@ -1,0 +1,181 @@
+[
+    {
+        "id": 1,
+        "title": "Театралы",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 0,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "15:12",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Сергей",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "12:10",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 3,
+        "title": "Алина",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "09:15",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Брат",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Пт",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Рабочие вопросы",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "Ср",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 6,
+        "title": "my-chat",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 января 2022",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 7,
+        "title": "my-chat",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "3 декабря 2021",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 8,
+        "title": "my-chat",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "12 апр 2021",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 9,
+        "title": "my-chat",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "16 марта 2021",
+            "content": "this is message content"
+        }
+    },
+    {
+        "id": 10,
+        "title": "my-chat",
+        "avatar": "../../images/test-avatar-first.jpeg",
+        "unread_count": 15,
+        "last_message": {
+            "user": {
+                "first_name": "Petya",
+                "second_name": "Pupkin",
+                "avatar": "/path/to/avatar.jpg",
+                "email": "my@email.com",
+                "login": "userLogin",
+                "phone": "8(911)-222-33-22"
+            },
+            "time": "1 января 2021",
+            "content": "this is message content"
+        }
+    }
+]

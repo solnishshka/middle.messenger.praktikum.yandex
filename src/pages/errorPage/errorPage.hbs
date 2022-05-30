@@ -1,0 +1,24 @@
+---
+title: Ошибка
+stylesheets: 
+    - ../../styles/fonts.scss
+    - ../../styles/global.scss
+    - ./errorPage.scss
+errorStatus: 500
+errorText: Произошла ошибка на сервере. Мы уже чиним ее. Попробуйте повторить запрос чуть позже.
+mainPage:
+    - ../index/index.hbs
+buttonText: Вернуться назад
+---
+
+{{!< base}}
+
+<main class="container container_position_center">
+    <h1 class="title">
+        {{errorStatus}}
+    </h1>
+    <p class="text">
+        {{errorText}}
+    </p>
+    {{> link href=mainPage text=buttonText classes="link" }}
+</main>

@@ -1,0 +1,96 @@
+---
+title: Профиль
+stylesheets: 
+    - ../../styles/fonts.scss
+    - ../../styles/global.scss
+    - ../../styles/avatar.scss
+    - ./profile.scss
+name: Анастасия
+avatarSrc: 
+    - ../../images/avatar.jpg
+buttonImg:
+    - ../../images/button.svg
+uploadIcon:
+    - ../../images/upload.svg
+mainPage:
+    - ../index/index.hbs
+loginPage:
+    - ../login/login.hbs
+---
+{{!< base}}
+
+<main class="container">
+    <div class="left-column">
+        {{> link img=buttonImg href=mainPage}}
+    </div>
+    <div class="content">
+        <div class="actions">
+            {{> link text="Выйти" href=loginPage classes="actions__item"}}
+            {{> link text="Удалить профиль" classes="actions__item"}}
+        </div>
+        <div class="profile">
+            {{> avatar src=avatarSrc uploadIcon=uploadIcon}}
+            <h1 class="name">{{name}}</h1>
+            <form class="form">
+                {{> 
+                    input 
+                    label="Почта" 
+                    containerClasses="form__item" 
+                    inputClasses="form__input" 
+                    disabled=true 
+                    value="pochta@yandex.ru"
+                    name="email"
+                }}
+                {{> 
+                    input 
+                    label="Логин" 
+                    containerClasses="form__item" 
+                    inputClasses="form__input" 
+                    disabled=true
+                    value="ivanivanov"
+                    name="login"
+                }}
+                {{> 
+                    input 
+                    label="Имя" 
+                    containerClasses="form__item" 
+                    inputClasses="form__input" 
+                    disabled=true
+                    value="Иван"
+                    name="first_name"
+                }}
+                {{> 
+                    input 
+                    label="Фамилия"
+                    containerClasses="form__item" 
+                    inputClasses="form__input" 
+                    disabled=true
+                    value="Иванов"
+                    name="second_name"
+                }}
+                {{> 
+                    input 
+                    label="Имя в чате" 
+                    containerClasses="form__item" 
+                    inputClasses="form__input" 
+                    disabled=true
+                    value="Иван"
+                    name="display_name"
+                }}        
+                {{> 
+                    input 
+                    label="Телефон" 
+                    containerClasses="form__item" 
+                    inputClasses="form__input" 
+                    disabled=true
+                    value="+7(909)967-30-30"
+                    name="phone"
+                }} 
+            </form>
+            <div class="change-actions">
+                {{> button text="Изменить данные" classes="change-actions__button"}}
+                {{> button text="Изменить пароль" classes="change-actions__button"}}
+            </div>
+        </div>
+    </div>
+</main>
