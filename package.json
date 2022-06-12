@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "web messenger",
   "scripts": {
-    "build": "rimraf dist && parcel build src/pages/index/index.hbs --no-cache && cp -r static dist",
-    "dev": "cp -r static dist/static && PORT=3000 parcel src/pages/index/index.hbs --no-cache",
-    "start": "npm run build && node app"
+    "dev": "rm -rf dist && cp -r static/ dist/ && parcel src/index.html --no-cache"
   },
   "repository": {
     "type": "git",
@@ -16,15 +14,25 @@
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "1.0.9",
     "@parcel/transformer-sass": "2.6.0",
+    "@types/node": "17.0.42",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb": "^19.0.4",
     "parcel": "2.6.0",
     "parcel-transformer-handlebars": "1.0.0",
     "rimraf": "3.0.2",
-    "sass": "1.52.1"
+    "sass": "1.52.1",
+    "stylelint": "^14.8.5",
+    "stylelint-config-standard": "^25.0.0"
   },
   "staticFiles": {
     "staticPath": "static"
   },
   "dependencies": {
-    "express": "4.18.1"
+    "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
+    "express": "4.18.1",
+    "handlebars": "4.7.7",
+    "nanoid": "4.0.0"
   }
 }
