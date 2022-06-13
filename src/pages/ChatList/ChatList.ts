@@ -11,19 +11,18 @@ export default class ChatList extends Block {
   constructor(props: ChatListProps) {
     super({
       ...props,
-      emptyText: "Выберите чат чтобы отправить сообщение",
       chats,
-      src: "../../images/test-avatar-first.jpeg",
-      settingsIcon: "../../images/settings.svg",
-      searchIcon: "../../images/search-icon.svg",
-      profilePage: "/profile",
       events: {
         click: (evt: Event) => {
-          this._currentChatId = (evt.target as HTMLElement | null)
-            ?.closest(".chat")
-            ?.getAttribute("data-key");
+          console.log("click");
+          const activeChat = (evt.target as HTMLElement | null)?.closest(
+            ".chat"
+          );
+
+          this._currentChatId = activeChat?.getAttribute("data-key");
+
           this.setProps({
-            hasActiveChat: this._currentChatId,
+            hasActiveChat: this._currentChatId ? true : false,
           });
         },
       },

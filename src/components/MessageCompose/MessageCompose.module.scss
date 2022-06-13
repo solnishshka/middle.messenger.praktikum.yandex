@@ -1,0 +1,146 @@
+$light-border: #eaeaea;
+$secondary: #606674;
+$light: #ccc;
+$main: #2f80ed;
+$white: #fff;
+
+.compose {
+  &__empty-text {
+    color: $light;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__wrapper_active {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    padding: 0 20px 0 10px;
+  }
+
+  &__header,
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    width: 100%;
+    min-height: 62px;
+    border-bottom: 1px solid $light-border;
+    position: fixed;
+    top: 0;
+    left: 331px;
+    background-color: $white;
+    z-index: 2222;
+    box-sizing: border-box;
+    padding: 0 20px 0 10px;
+  }
+
+  // TODO - сделать footer fixed
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    left: 331px;
+    width: 100%;
+    min-height: 64px;
+    border-top: 1px solid $light-border;
+    padding: 0 42px 0 30px;
+    justify-content: center;
+    background-color: $white;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+  }
+
+  &__user-name {
+    color: $secondary;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+
+  &__menu-button,
+  &__send-button {
+    background-color: inherit;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  &__send-button {
+    transform: rotate(180deg);
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input {
+    width: 94%;
+    max-width: 900px;
+  }
+
+  &__input-field {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $light-border;
+    min-height: 40px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 46px;
+
+    &:focus {
+      background-color: rgb(204 204 204 / 20%);
+    }
+  }
+
+  &__input-attach {
+    top: 10px;
+    right: 20px;
+    position: absolute;
+    border: none;
+    background-color: inherit;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  &__main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 950px;
+    padding: 20px 20px 20px 10px;
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 24px;
+    column-gap: 116px;
+    padding-bottom: 84px;
+    padding-top: 82px;
+  }
+}
+
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}

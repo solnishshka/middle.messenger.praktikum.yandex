@@ -1,5 +1,7 @@
+import styles from './Input.module.scss';
+
 export const inputTemplate = `
-    <label class="input {{containerClasses}}">
+    <label class="input ${styles["input__container"]} {{containerClasses}}">
         <input 
             class="input__field {{inputClasses}}" 
             placeholder="{{placeholder}}" 
@@ -15,6 +17,12 @@ export const inputTemplate = `
         {{/if}}
         {{#if error}}
             <span class="input__error">{{error}}</span>
+        {{/if}}
+        {{#if buttonIcon}}
+            {{{ Button  
+                img=buttonIcon
+                classes=buttonClasses
+            }}}
         {{/if}}
     </label>
 `;

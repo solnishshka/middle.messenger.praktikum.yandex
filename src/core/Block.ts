@@ -95,6 +95,7 @@ export default class Block {
     }
 
     Object.entries(events).forEach(([event, listener]) => {
+      console.log('event set', event, this._element);
       this._element?.addEventListener(event, listener);
     });
   }
@@ -107,12 +108,13 @@ export default class Block {
     }
 
     Object.entries(events).forEach(([event, listener]) => {
+      console.log('event remove', event)
       this._element?.removeEventListener(event, listener);
     });
   }
 
   _render(): void {
-    this._removeEvents();
+    //this._removeEvents();
 
     const templateString = this.render();
 
@@ -121,7 +123,7 @@ export default class Block {
     const newElement = fragment.firstElementChild as HTMLElement;
 
     if (this._element) {
-      this._removeEvents();
+      //this._removeEvents();
       this._element.replaceWith(newElement);
     } else {
       this._element = newElement;

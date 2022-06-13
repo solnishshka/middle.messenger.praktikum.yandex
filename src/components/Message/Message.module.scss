@@ -1,0 +1,60 @@
+$light-border: #eaeaea;
+$secondary: #606674;
+$light: #ccc;
+$main: #2f80ed;
+$white: #fff;
+
+.message {
+  position: relative;
+  box-sizing: border-box;
+  padding: 12px 12px 24px 12px;
+  background: rgba(204, 204, 204, 0.2);
+  border-radius: 0 10px 10px 10px;
+  max-width: 400px;
+  min-width: 150px;
+
+  &_type_my {
+    background: rgba(47, 128, 237, 0.2);
+    border-radius: 10px 10px 0 10px;
+    margin-left: auto;
+  }
+
+  &_type_image {
+      background: inherit;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid $light-border;
+  }
+
+  &_type_image time {
+    padding: 4px;
+    border-radius: 5px;
+    background-color: $white;
+    color: $secondary;
+  }
+
+  &__time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 9px;
+    color: $light;
+  }
+
+  &_type_my time {
+    color: $main;
+  }
+
+  &__status {
+      position: absolute;
+      bottom: 12px;
+      right: 40px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

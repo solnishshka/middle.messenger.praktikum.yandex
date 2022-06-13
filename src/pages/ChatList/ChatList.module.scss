@@ -7,6 +7,7 @@ $white: #fff;
 .container {
   display: grid;
   grid-template-columns: 330px 1fr;
+  position: relative;
 }
 
 .right-column {
@@ -14,25 +15,18 @@ $white: #fff;
   align-items: center;
   justify-content: center;
   background-color: rgb(204 204 204 / 20%);
+  border-left: 1px solid $light-border;
+  max-height: 100vh;
+  overflow-y: scroll;
 
-  &__empty-text {
-    color: $light;
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-  &__active-chat {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
+  &_active {
+    background-color: $white;
   }
 }
 
 .left-column {
   width: 330px;
-  border-right: 1px solid $light-border;
+  position: relative;
 }
 
 .avatar__container {
@@ -42,6 +36,13 @@ $white: #fff;
 }
 
 .search {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 2222;
+  top: 0;
+  left: 0;
+  width: 330px;
+  background-color: $white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,4 +108,10 @@ $white: #fff;
   &:hover {
     opacity: 0.7;
   }
+}
+
+.chats {
+  padding-top: 74px;
+  max-height: calc(100vh - 74px);
+  overflow-y: scroll;
 }
