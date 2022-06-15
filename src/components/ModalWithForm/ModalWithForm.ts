@@ -3,6 +3,8 @@ import { ModalWithFormProps } from "./ModalWithForm.types";
 
 import * as styles from "./ModalWithForm.module.scss";
 
+import closeButton from "../../images/close-button.svg";
+
 export default class ModalWithForm extends Block {
   static componentName = "ModalWithForm";
 
@@ -16,7 +18,8 @@ export default class ModalWithForm extends Block {
             <div class="${styles.modal__content}">
                 {{{Button 
                   className="${styles["modal__close-button"]}" 
-                  onClick=onClose img="../../images/close-button.svg"
+                  onClick=onClose 
+                  img="${closeButton}"
                 }}}
                 {{{Form
                   title=title

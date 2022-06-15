@@ -24,19 +24,19 @@ if (pathName === '/') {
   page = new ChatList({});
 }
 
-if (pathName === '/profile') {
+if (pathName === '/profile/') {
   page = new Profile({});
 }
 
-if (pathName === '/error') {
+if (pathName === '/error/') {
   page = new ErrorPage({});
 }
 
-if (pathName === '/login') {
+if (pathName === '/login/') {
   page = new Login({});
 }
 
-if (pathName === '/register') {
+if (pathName === '/register/') {
   page = new Register({});
 }
 

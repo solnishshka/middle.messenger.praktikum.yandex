@@ -1,11 +1,15 @@
-import * as styles from './ChatList.module.scss';
+import * as styles from "./ChatList.module.scss";
+
+import settingsIcon from "../../images/settings.svg";
+import searchIcon from "../../images/search-icon.svg";
+import avatar from '../../images/test-avatar-first.jpeg';
 
 export const chatListTemplate = `
 <main class="container ${styles.container}">
-    <div class="${styles['left-column']}">
+    <div class="${styles["left-column"]}">
         <div class="${styles.search}">
             {{{Link 
-                img="../../images/settings.svg" 
+                img="${settingsIcon}" 
                 classes="link ${styles.link}" 
                 href="/profile"
             }}}
@@ -13,7 +17,7 @@ export const chatListTemplate = `
                 iconClassName="${styles.input__icon}"
                 containerClassName="${styles.search__label}" 
                 inputClassName="${styles.search__input} ${styles.input__field}" 
-                src="../../images/search-icon.svg"
+                src="${searchIcon}"
                 placeholder="Поиск"
             }}}
         </div>
@@ -26,14 +30,14 @@ export const chatListTemplate = `
                     lastMessageContent=last_message.content
                     count=unread_count
                     time=last_message.time
-                    src="../../images/test-avatar-first.jpeg"
+                    src="${avatar}"
                 }}}
             {{/each}}
         </div>
     </div>
     <div 
-        class="${styles['right-column']} 
-        {{#if hasActiveChat}}${styles['right-column_active']}{{/if}}"
+        class="${styles["right-column"]} 
+        {{#if hasActiveChat}}${styles["right-column_active"]}{{/if}}"
     >
         {{{MessageCompose 
             hasActiveChat=hasActiveChat 

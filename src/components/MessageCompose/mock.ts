@@ -1,10 +1,12 @@
+import image from '../../images/test-message-image.jpg';
+
 export const messages = [
   {
     text: 'Test test test',
     time: '15:30',
   },
   {
-    image: '../../images/test-message-image.jpg',
+    image,
     time: '17:30',
   },
   {

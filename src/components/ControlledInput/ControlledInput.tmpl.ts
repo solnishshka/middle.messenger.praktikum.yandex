@@ -22,7 +22,7 @@ export const inputTemplate = `
         {{/if}}
         {{{ Error }}}
         {{#if buttonIcon}}
-            {{{ Button  
+            {{{Button  
                 img=buttonIcon
                 className=buttonClassName
             }}}

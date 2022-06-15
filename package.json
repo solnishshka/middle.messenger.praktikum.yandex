@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "web messenger",
   "scripts": {
-    "start": "rimraf dist && cp -r static/ dist/ && parcel src/index.html --no-cache",
+    "dev": "rimraf dist && cp -r static/ dist/ && parcel src/index.html --no-cache",
+    "build": "rimraf dist && parcel build src/index.html --no-cache",
+    "start": "npm run build && node app",
     "lint": "eslint src --quiet --fix --ext .ts"
   },
   "repository": {

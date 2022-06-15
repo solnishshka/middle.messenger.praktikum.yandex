@@ -1,5 +1,7 @@
 import * as styles from "./MessageCompose.module.scss";
 
+import composeMenuIcon from "../../images/compose-menu.svg";
+
 export const messageComposeActiveChatTemplate = `
     <div class="${styles.compose__wrapper_active}">
         <div class="${styles.compose__header}">
@@ -12,7 +14,7 @@ export const messageComposeActiveChatTemplate = `
                 <p class="${styles["compose__user-name"]}">{{userName}}</p>
             </div>
             {{{Button 
-                img="../../images/compose-menu.svg" 
+                img="${composeMenuIcon}" 
                 className="${styles["compose__menu-button"]}"
             }}}
         </div>

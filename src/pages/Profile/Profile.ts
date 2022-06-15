@@ -1,39 +1,44 @@
-import { Block } from '../../core';
+import { Block } from "../../core";
 
-import { ProfileProps } from './Profile.types';
+import { getFormValues } from "../../utils";
 
-import { profilePageTemplate } from './Profile.tmpl';
-import { formDataInputs, formPasswordInputs } from './Profile.configs';
-import { getFormValues } from '../../utils';
+import { ProfileProps } from "./Profile.types";
+
+import { profilePageTemplate } from "./Profile.tmpl";
+import { formDataInputs, formPasswordInputs } from "./Profile.configs";
+
+import avatar from "../../images/avatar.jpg";
+import buttonImg from "../../images/button.svg";
+import uploadIcon from "../../images/upload.svg";
 
 export default class Profile extends Block {
-  static componentName = 'Profile';
+  static componentName = "Profile";
 
   constructor(props: ProfileProps) {
     super({
       ...props,
-      loginPage: '/login',
-      mainPage: '/',
-      deleteProfile: '/error',
-      name: 'Анастасия',
-      avatarSrc: '../../images/avatar.jpg',
-      buttonImg: '../../images/button.svg',
-      uploadIcon: '../../images/upload.svg',
+      loginPage: "/login",
+      mainPage: "/",
+      deleteProfile: "/error",
+      name: "Анастасия",
+      avatarSrc: avatar,
+      buttonImg: buttonImg,
+      uploadIcon: uploadIcon,
       isVisible: false,
-      title: '',
-      buttonText: 'Сохранить',
+      title: "",
+      buttonText: "Сохранить",
       inputs: [],
       handleChangeData: () => {
         this.setProps({
           isVisible: true,
-          title: 'Изменить данные профиля',
+          title: "Изменить данные профиля",
           inputs: formDataInputs,
         });
       },
       handleChangePassword: () => {
         this.setProps({
           isVisible: true,
-          title: 'Изменить пароль',
+          title: "Изменить пароль",
           inputs: formPasswordInputs,
         });
       },

@@ -5,6 +5,9 @@ import { ComposeFormProps } from "./ComposeForm.types";
 
 import * as styles from "./ComposeForm.module.scss";
 
+import attachIcon from "../../images/attach-button.svg";
+import sendButtonIcon from "../../images/button.svg";
+
 export default class ComposeForm extends Block {
   static componentName = "ComposeForm";
 
@@ -39,14 +42,14 @@ export default class ComposeForm extends Block {
                         containerClassName="${styles["compose-form__input"]}" 
                         inputClassName="${styles["compose-form__input-field"]}" 
                         placeholder="Сообщение"
-                        buttonIcon="../../images/attach-button.svg"
+                        buttonIcon="${attachIcon}"
                         buttonClassName="${styles["compose-form__input-attach"]}"
                         name="message"
                         validationRule=validationRule
                 }}}
                 {{{ 
                     Button 
-                        img="../../images/button.svg" 
+                        img="${sendButtonIcon}" 
                         className="${styles["compose-form__send-button"]}"
                 }}}
             </form>

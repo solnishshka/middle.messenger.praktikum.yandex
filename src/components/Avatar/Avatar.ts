@@ -1,14 +1,16 @@
-import { Block } from '../../core';
+import { Block } from "../../core";
 
-import { AvatarProps } from './Avatar.types';
+import { AvatarProps } from "./Avatar.types";
 
-import * as styles from './Avatar.module.scss';
+import * as styles from "./Avatar.module.scss";
+
+import defaultAvatar from "../../images/default-avatar.png";
 
 export default class Avatar extends Block {
-  static componentName = 'Avatar';
+  static componentName = "Avatar";
 
   constructor(props: AvatarProps) {
-    super({ ...props, src: props.src ?? '../../images/default-avatar.png' });
+    super({ ...props, src: props.src ?? `${defaultAvatar}` });
   }
 
   render() {

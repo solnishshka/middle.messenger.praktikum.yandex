@@ -1,5 +1,7 @@
 import * as styles from './Message.module.scss';
 
+import statusIcon from '../../images/status-icon-read.svg';
+
 export const messageTemplate = `
     <article 
         class="${styles.message} 
@@ -13,7 +15,7 @@ export const messageTemplate = `
         {{#if isMy}}
             <img 
                 class="${styles.message__status}" 
-                src="../../images/status-icon-read.svg" 
+                src="${statusIcon}" 
                 alt="Сообщение прочитано"
             />
         {{/if}}
