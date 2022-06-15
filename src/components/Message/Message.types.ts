@@ -1,7 +1,7 @@
 export enum MessageState {
-  read = "read",
-  unread = "unread",
-  undelivered = "undelivered",
+  read = 'read',
+  unread = 'unread',
+  undelivered = 'undelivered',
 }
 
 export interface MessageProps {

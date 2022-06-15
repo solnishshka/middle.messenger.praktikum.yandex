@@ -6,7 +6,8 @@ export const loginPageTemplate = `
                 buttonText=buttonText 
                 linkText=linkText 
                 linkHref=linkHref 
-                inputs=inputs 
+                inputs=inputs
+                onSubmit=onSubmit
         }}}
     </main>
 `;

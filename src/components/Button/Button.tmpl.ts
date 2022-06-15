@@ -1,6 +1,8 @@
+import * as styles from './Button.module.scss';
+
 export const buttonTemplate = `
-  <button class="button {{classes}}">
-    {{#if img}}<img class="button__image {{imgClasses}}" src="{{img}}" />{{/if}}
+  <button class="${styles.button} {{className}}">
+    {{#if img}}{{{ Image className=imgClassName src=img alt="Кнопка"}}}{{/if}}
     {{text}}
   </button>
 `;

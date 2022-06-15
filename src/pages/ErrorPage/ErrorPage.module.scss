@@ -7,6 +7,10 @@ $white: #fff;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {

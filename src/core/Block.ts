@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
-import EventBus from "./EventBus";
 import Handlebars from "handlebars";
+import EventBus from "./EventBus";
 
 export enum Events {
   INIT = "init",
@@ -11,29 +11,32 @@ export enum Events {
 
 export default class Block {
   eventBus: () => EventBus<string, unknown[]>;
+
+  // TODO - types
   props: any;
 
+  static componentName: string;
+
   public id = nanoid(6);
+
   private _element: HTMLElement | null = null;
-  private _meta: {
-    props: any;
-  };
+
+  protected refs?: Record<string, Block> = {};
 
   protected children: Record<string, Block>;
 
   constructor(propsAndChildren = {}) {
     const eventBus = new EventBus();
     const { props, children } = this.getPropsAndChildren(propsAndChildren);
-    this._meta = {
-      props,
-    };
 
     this.children = children;
+
     this.props = this._makePropsProxy(props);
 
     this.eventBus = () => eventBus;
 
     this._registerEvents(eventBus);
+
     eventBus.emit(Events.INIT);
   }
 
@@ -52,26 +55,18 @@ export default class Block {
     this.componentDidMount(this.props);
   }
 
-  // Может переопределять пользователь, необязательно трогать
-  componentDidMount(oldProps: Record<string, unknown>) {}
+  componentDidMount(_: Record<string, unknown>) {}
 
   dispatchComponentDidMount() {
     this.eventBus().emit(Events.FLOW_CDM);
   }
 
-  _componentDidUpdate(
-    oldProps: Record<string, unknown>,
-    newProps: Record<string, unknown>
-  ): void {
+  _componentDidUpdate(oldProps: any, newProps: any): void {
     this._render();
     this.componentDidUpdate(oldProps, newProps);
   }
 
-  // Может переопределять пользователь, необязательно трогать
-  componentDidUpdate(
-    oldProps: Record<string, unknown>,
-    newProps: Record<string, unknown>
-  ) {
+  componentDidUpdate(_: any, __: any) {
     return true;
   }
 
@@ -79,7 +74,6 @@ export default class Block {
     if (!nextProps) {
       return;
     }
-
     Object.assign(this.props, nextProps);
   };
 
@@ -88,34 +82,30 @@ export default class Block {
   }
 
   _addEvents() {
-    const events: Record<string, () => void> = this.props.events;
+    const { events } = this.props;
 
     if (!events || !this._element) {
       return;
     }
 
     Object.entries(events).forEach(([event, listener]) => {
-      console.log('event set', event, this._element);
-      this._element?.addEventListener(event, listener);
+      this._element?.addEventListener(event, listener as () => void);
     });
   }
 
   _removeEvents() {
-    const events: Record<string, () => void> = this.props.events;
+    const { events } = this.props;
 
     if (!events || !this._element) {
       return;
     }
 
     Object.entries(events).forEach(([event, listener]) => {
-      console.log('event remove', event)
-      this._element?.removeEventListener(event, listener);
+      this._element?.removeEventListener(event, listener as () => void);
     });
   }
 
   _render(): void {
-    //this._removeEvents();
-
     const templateString = this.render();
 
     const fragment = this.compile(templateString, this.props);
@@ -123,11 +113,10 @@ export default class Block {
     const newElement = fragment.firstElementChild as HTMLElement;
 
     if (this._element) {
-      //this._removeEvents();
       this._element.replaceWith(newElement);
-    } else {
-      this._element = newElement;
     }
+
+    this._element = newElement;
 
     this._addEvents();
   }
@@ -159,8 +148,6 @@ export default class Block {
   }
 
   _makePropsProxy(props: Record<string, unknown>) {
-    // Можно и так передать this
-    // Такой способ больше не применяется с приходом ES6+
     const self = this;
 
     const proxyProps = new Proxy(props, {
@@ -174,14 +161,11 @@ export default class Block {
         return target[prop];
       },
       set(target, prop: string, value: unknown) {
-        if (target[prop] !== value) {
-          target[prop] = value;
-          self
-            .eventBus()
-            .emit(Events.FLOW_CDU, target, { ...target, [prop]: value });
-          return true;
-        }
-        return false;
+        target[prop] = value;
+        self
+          .eventBus()
+          .emit(Events.FLOW_CDU, target, { ...target, [prop]: value });
+        return true;
       },
     });
     return proxyProps;
@@ -190,7 +174,6 @@ export default class Block {
   _createDocumentElement<T extends HTMLElement>(
     tagName: keyof HTMLElementTagNameMap
   ): T {
-    // Можно сделать метод, который через фрагменты в цикле создаёт сразу несколько блоков
     return document.createElement(tagName) as T;
   }
 

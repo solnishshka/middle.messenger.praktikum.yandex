@@ -1,16 +1,14 @@
-import { renderDOM, registerComponents, Block } from "./core";
+import { renderDOM, registerComponents, Block } from './core';
 
-import ChatList from "./pages/ChatList";
-import Profile from "./pages/Profile";
-import ErrorPage from "./pages/ErrorPage";
+import {
+  ChatList, Profile, ErrorPage, Login, Register,
+} from './pages';
 
-import * as components from "./components";
+import * as components from './components';
 
-import "./styles/variables.scss";
-import "./styles/global.scss";
-import "./styles/fonts.scss";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import './styles/variables.scss';
+import './styles/global.scss';
+import './styles/fonts.scss';
 
 Object.values(components).forEach((component) => {
   registerComponents(component);
@@ -22,26 +20,26 @@ const pathName = window.location.pathname;
 
 let page: Block = new ChatList({});
 
-if (pathName === "/") {
+if (pathName === '/') {
   page = new ChatList({});
 }
 
-if (pathName === "/profile") {
+if (pathName === '/profile') {
   page = new Profile({});
 }
 
-if (pathName === "/error") {
+if (pathName === '/error') {
   page = new ErrorPage({});
 }
 
-if (pathName === "/login") {
+if (pathName === '/login') {
   page = new Login({});
 }
 
-if (pathName === "/register") {
+if (pathName === '/register') {
   page = new Register({});
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderDOM("#root", page);
+document.addEventListener('DOMContentLoaded', () => {
+  renderDOM('#root', page);
 });

@@ -1,4 +1,4 @@
-import { MessageProps } from "../Message/Message.types";
+import { MessageProps } from '../Message/Message.types';
 
 export interface MessageComposeProps {
   hasActiveChat?: boolean;

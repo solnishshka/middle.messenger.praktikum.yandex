@@ -1,10 +1,12 @@
-import { Block } from "../../core";
-import { linkTemplate } from "./Link.tmpl";
-import { LinkProps } from "./Link.types";
+import { Block } from '../../core';
+import { linkTemplate } from './Link.tmpl';
+import { LinkProps } from './Link.types';
 
 export default class Link extends Block {
-  constructor(props: LinkProps) {
-    super(props);
+  static componentName = 'Link';
+
+  constructor({ onClick, ...props }: LinkProps) {
+    super({ ...props, events: { click: onClick } });
   }
 
   render() {

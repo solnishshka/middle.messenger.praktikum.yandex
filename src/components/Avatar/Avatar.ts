@@ -1,14 +1,22 @@
-import { Block } from "../../core";
-import { avatarTemplate } from "./Avatar.tmpl";
-import { AvatarProps } from "./Avatar.types";
-import './Avatar.scss';
+import { Block } from '../../core';
+
+import { AvatarProps } from './Avatar.types';
+
+import * as styles from './Avatar.module.scss';
 
 export default class Avatar extends Block {
+  static componentName = 'Avatar';
+
   constructor(props: AvatarProps) {
-    super(props);
+    super({ ...props, src: props.src ?? '../../images/default-avatar.png' });
   }
 
   render() {
-    return avatarTemplate;
+    return `
+      <div class="${styles.avatar__container} {{className}}">
+        {{{ Image src=src alt="Аватар пользователя" className="${styles.avatar}" }}}
+        {{#if uploadIcon}}{{{ Button classes=uploadClassName img=uploadIcon}}}{{/if}}
+      </div>
+    `;
   }
 }

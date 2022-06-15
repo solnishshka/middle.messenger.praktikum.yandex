@@ -1,6 +1,10 @@
 export interface ChatProps {
-    src: string;
-    events?: {
-        click?: () => void;
-    }
+  src: string;
+  onClick?: () => void;
+  className?: string;
+  avatarClassName?: string;
+  count: number;
+  time: string;
+  lastMessageContent?: string;
+  title: string;
 }

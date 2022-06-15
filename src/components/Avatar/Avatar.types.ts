@@ -1,6 +1,6 @@
 export interface AvatarProps {
-    src: string;
-    uploadIcon?: string;
-    classes?: string;
-    uploadClasses?: string;
+  src: string;
+  uploadIcon?: string;
+  className?: string;
+  uploadClassName?: string;
 }

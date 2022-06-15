@@ -1,3 +1,1 @@
-export interface ErrorPageProps {
-    
-}
+export interface ErrorPageProps {}

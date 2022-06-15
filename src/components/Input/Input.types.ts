@@ -1,12 +1,12 @@
 export type InputProps = {
-    labelClasses?: string;
-    inputClasses?: string;
-    iconClasses?: string;
-    containerClasses?: string;
-    buttonClasses?: string;
-    events?: {
-        blur?: () => void;
-        input?: () => void;
-        focus?: () => void;
-    };
-}
+  value?: unknown;
+  className?: string;
+  name: string;
+  id: string;
+  placeholder?: string;
+  required?: boolean;
+  disabled?: boolean;
+  onClick?: (event: Event) => void;
+  onBlur?: (event: Event) => void;
+  onInput?: (event: Event) => void;
+};

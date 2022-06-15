@@ -1,1 +1,1 @@
-export { default } from "./MessageCompose";
+export { default } from './MessageCompose';

@@ -1,16 +1,17 @@
-import { Block } from "../../core";
+import { Block } from '../../core';
 import {
   messageComposeActiveChatTemplate,
   messageComposeEmptyChatTemplate,
-} from "./MessageCompose.tmpl";
-import { MessageComposeProps } from "./MessageCompose.types";
-import { messages } from "./mock";
+} from './MessageCompose.tmpl';
+import { MessageComposeProps } from './MessageCompose.types';
+import { messages } from './mock';
 
 export default class MessageCompose extends Block {
+  static componentName = 'MessageCompose';
+
   constructor(props: MessageComposeProps) {
     super({
       ...props,
-      avatarSrc: "../../images/test-avatar-first.jpeg",
       messages,
     });
   }

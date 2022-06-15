@@ -1,4 +1,4 @@
-import styles from "./Profile.module.scss";
+import * as styles from "./Profile.module.scss";
 
 export const profilePageTemplate = `
     <main class="container ${styles.container}">
@@ -7,72 +7,101 @@ export const profilePageTemplate = `
         </div>
         <div class="content">
             <div class="${styles.actions}">
-                {{{ Link text="Выйти" href=loginPage classes="${styles["actions__item"]}" }}}
-                {{{ Link text="Удалить профиль" href=deleteProfile classes="${styles["actions__item"]}" }}}
+                {{{Link 
+                    text="Выйти" 
+                    href=loginPage 
+                    classes="${styles.actions__item}" 
+                }}}
+                {{{Link 
+                    text="Удалить профиль" 
+                    href=deleteProfile 
+                    classes="${styles.actions__item}"
+                }}}
             </div>
             <div class="${styles.profile}">
-            {{{ Avatar classes="${styles["avatar__container"]}" uploadClasses="${styles["avatar__upload"]}" src=avatarSrc uploadIcon=uploadIcon }}}
+            {{{Avatar 
+                className="${styles.avatar__container}" 
+                uploadClassName="${styles.avatar__upload}" 
+                src=avatarSrc 
+                uploadIcon=uploadIcon 
+            }}}
                 <h1 class="${styles.name}">{{name}}</h1>
                 <form class="${styles.form}">
-                    {{{ Input 
-                        label="Почта" 
-                        containerClasses="${styles.form__item}" 
-                        inputClasses="${styles.form__input}" 
-                        disabled=true 
-                        value="pochta@yandex.ru"
-                        name="email"
+                    {{{ ControlledInput 
+                            label="Почта" 
+                            containerClassName="${styles.form__item}" 
+                            inputClassName="${styles.form__input}" 
+                            disabled=true 
+                            value="pochta@yandex.ru"
+                            name="email"
                     }}}
                     {{{ 
-                        Input 
-                        label="Логин" 
-                        containerClasses="${styles.form__item}" 
-                        inputClasses="${styles.form__input}" 
-                        disabled=true
-                        value="ivanivanov"
-                        name="login"
+                        ControlledInput 
+                            label="Логин" 
+                            containerClassName="${styles.form__item}" 
+                            inputClassName="${styles.form__input}" 
+                            disabled=true
+                            value="ivanivanov"
+                            name="login"
                     }}}
                     {{{ 
-                        Input 
-                        label="Имя" 
-                        containerClasses="${styles.form__item}" 
-                        inputClasses="${styles.form__input}" 
-                        disabled=true
-                        value="Иван"
-                        name="first_name"
+                        ControlledInput 
+                            label="Имя" 
+                            containerClassName="${styles.form__item}" 
+                            inputClassName="${styles.form__input}" 
+                            disabled=true
+                            value="Иван"
+                            name="first_name"
                     }}}
                     {{{
-                        Input 
-                        label="Фамилия"
-                        containerClasses="${styles.form__item}" 
-                        inputClasses="${styles.form__input}" 
-                        disabled=true
-                        value="Иванов"
-                        name="second_name"
+                        ControlledInput 
+                            label="Фамилия"
+                            containerClassName="${styles.form__item}" 
+                            inputClassName="${styles.form__input}" 
+                            disabled=true
+                            value="Иванов"
+                            name="second_name"
                     }}}
                     {{{
-                        Input 
-                        label="Имя в чате" 
-                        containerClasses="${styles.form__item}" 
-                        inputClasses="${styles.form__input}" 
-                        disabled=true
-                        value="Иван"
-                        name="display_name"
+                        ControlledInput 
+                            label="Имя в чате" 
+                            containerClassName="${styles.form__item}" 
+                            inputClassName="${styles.form__input}" 
+                            disabled=true
+                            value="Иван"
+                            name="display_name"
                     }}}        
                     {{{
-                        Input 
-                        label="Телефон" 
-                        containerClasses="${styles.form__item}" 
-                        inputClasses="${styles.form__input}" 
-                        disabled=true
-                        value="+7(909)967-30-30"
-                        name="phone"
+                        ControlledInput 
+                            label="Телефон" 
+                            containerClassName="${styles.form__item}" 
+                            inputClassName="${styles.form__input}" 
+                            disabled=true
+                            value="+7(909)967-30-30"
+                            name="phone"
                     }}} 
                 </form>
                 <div class="${styles["change-actions"]}">
-                    {{{ Button text="Изменить данные" classes="${styles["change-actions__button"]}"}}}
-                    {{{ Button text="Изменить пароль" classes="${styles["change-actions__button"]}"}}}
+                    {{{Button 
+                        text="Изменить данные" 
+                        className="${styles["change-actions__button"]}" 
+                        onClick=handleChangeData
+                    }}}
+                    {{{Button 
+                        text="Изменить пароль" 
+                        className="${styles["change-actions__button"]}" 
+                        onClick=handleChangePassword
+                    }}}
                 </div>
             </div>
         </div>
+        {{{ModalWithForm 
+            isVisible=isVisible 
+            title=title 
+            buttonText=buttonText 
+            inputs=inputs 
+            onClose=onClose 
+            onSubmit=onSubmit
+        }}}
     </main>
 `;

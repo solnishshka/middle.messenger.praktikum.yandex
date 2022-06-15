@@ -1,18 +1,19 @@
-export const formConfig: {
-    name: string;
-    label: string;
-    type?: HTMLInputElement["type"];
-    required?: boolean;
-  }[] = [
+import { ControlledInputProps } from '../../components/ControlledInput/ControlledInput.types';
+import { InputType } from '../../consts/input-types';
+import { ValidationRule } from '../../utils/validator';
+
+export const formConfig: ControlledInputProps[] = [
   {
-    label: "Логин",
-    name: "login",
+    label: 'Логин',
+    name: 'login',
     required: true,
+    validationRule: ValidationRule.Login,
   },
   {
-    label: "Пароль",
-    name: "password",
+    label: 'Пароль',
+    name: 'password',
     required: true,
-    type: "password",
+    type: InputType.Password,
+    validationRule: ValidationRule.Password,
   },
 ];

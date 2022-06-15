@@ -1,12 +1,13 @@
 export const registerPageTemplate = `
-    <main class="container  container_position_center">
+    <main class="container container_position_center">
         {{{ 
             Form 
-                title=title
-                buttonText=buttonText 
-                linkText=linkText 
-                linkHref=linkHref
+                title="Регистрация"
+                buttonText="Создать аккаунт"
+                linkText="Уже есть аккаунт? Войти"
+                linkHref="/login"
                 inputs=inputs
+                onSubmit=onSubmit
         }}}
     </main>
 `;

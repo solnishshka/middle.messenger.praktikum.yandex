@@ -1,7 +1,7 @@
-import styles from "./ErrorPage.module.scss";
+import * as styles from './ErrorPage.module.scss';
 
 export const errorPageTemplate = `
-    <main class="container ${styles.container} container_position_center}">
+    <main class="container ${styles.container}">
         <h1 class="${styles.title}">
             {{errorStatus}}
         </h1>

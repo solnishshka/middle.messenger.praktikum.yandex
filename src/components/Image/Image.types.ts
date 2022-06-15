@@ -1,7 +1,7 @@
-export interface IconProps {
+export interface ImageProps {
   src: string;
   alt: string;
-  classes: string;
+  className: string;
   events?: {
     click?: () => void;
   };
