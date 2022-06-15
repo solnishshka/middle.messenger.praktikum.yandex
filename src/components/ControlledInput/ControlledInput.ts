@@ -1,14 +1,14 @@
-import { Block } from '../../core';
+import { Block } from "../../core";
 
-import { validateValue } from '../../utils/validator';
+import { validateValue } from "../../utils/validator";
 
-import Error from '../Error';
+import Error from "../Error";
 
-import { inputTemplate } from './ControlledInput.tmpl';
-import { ControlledInputProps } from './ControlledInput.types';
+import { inputTemplate } from "./ControlledInput.tmpl";
+import { ControlledInputProps } from "./ControlledInput.types";
 
 export default class ControlledInput extends Block {
-  static componentName = 'ControlledInput';
+  static componentName = "ControlledInput";
 
   public isValid = true;
 
@@ -21,8 +21,10 @@ export default class ControlledInput extends Block {
 
         if (validationRule && errorElement) {
           const errorText = validateValue(validationRule, value);
-          if (errorText.length > 0) {
+          if (errorText !== "") {
             this.isValid = false;
+          } else {
+            this.isValid = true;
           }
           errorElement.setProps({ errorText });
         }
@@ -33,8 +35,10 @@ export default class ControlledInput extends Block {
 
         if (validationRule && errorElement) {
           const errorText = validateValue(validationRule, value);
-          if (errorText.length > 0) {
+          if (errorText !== "") {
             this.isValid = false;
+          } else {
+            this.isValid = true;
           }
           errorElement.setProps({ errorText });
         }

@@ -46,7 +46,6 @@ export default class Profile extends Block {
         this.setProps({ isVisible: false });
       },
       onSubmit: (evt: SubmitEvent) => {
-        evt.preventDefault();
         // TODO - данные временно в консоль
         const values = getFormValues(evt.target as HTMLFormElement);
         console.log(values);

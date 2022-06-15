@@ -6,7 +6,7 @@ export type InputProps = {
   placeholder?: string;
   required?: boolean;
   disabled?: boolean;
-  onClick?: (event: Event) => void;
-  onBlur?: (event: Event) => void;
+  onBlur?: (event: FocusEvent) => void;
   onInput?: (event: Event) => void;
+  onFocus?: (event: FocusEvent) => void;
 };

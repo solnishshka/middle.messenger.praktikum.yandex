@@ -1,10 +1,4 @@
-$error: #e53d3d;
-$light-border: #eaeaea;
-$black: #000;
-$secondary: #606674;
-$light: #ccc;
-$main: #2f80ed;
-$white: #fff;
+@import url(../../styles//variables.scss);
 
 .form {
   display: flex;
@@ -21,7 +15,7 @@ $white: #fff;
     transition: 0.1s ease 0.1s;
     font-size: 12px;
     line-height: 1;
-    color: $light;
+    color: var(--light);
     font-weight: 500;
     cursor: text;
   }
@@ -32,7 +26,7 @@ $white: #fff;
   }
 
   &__title {
-    color: $main;
+    color: var(--main);
     font-size: 20px;
     margin-bottom: 40px;
   }
@@ -46,8 +40,8 @@ $white: #fff;
     padding: 25px 0 10px 4px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid $main;
-    color: $secondary;
+    border-bottom: 1px solid var(--main);
+    color: var(--secondary);
     font-size: 12px;
     line-height: 1;
     font-weight: 500;
@@ -55,7 +49,7 @@ $white: #fff;
     &::placeholder {
       font-size: 12px;
       line-height: 1;
-      color: $light;
+      color: var(--light);
       font-weight: 500;
     }
 
@@ -66,8 +60,8 @@ $white: #fff;
 
   &__button {
     margin-top: 60px;
-    background-color: $main;
-    color: $white;
+    background-color: var(--main);
+    color: var(--white);
     border: none;
     padding: 12px 118px;
     border-radius: 5px;
@@ -82,7 +76,7 @@ $white: #fff;
     margin-top: 16px;
     font-size: 12px;
     line-height: 12px;
-    color: $main;
+    color: var(--main);
     text-decoration: none;
 
     &:hover {

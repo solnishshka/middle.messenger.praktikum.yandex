@@ -12,9 +12,9 @@ export const inputTemplate = `
                 disabled=disabled
                 required=required
                 type=type
-                onClick=onClick
-                onBlur=onBlur
                 onInput=onInput
+                onBlur=onBlur
+                onFocus=onInput
         }}}
         <span class="input__label {{labelClassName}}">{{label}}</span>
         {{#if src}}

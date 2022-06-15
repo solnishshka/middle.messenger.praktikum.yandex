@@ -1,18 +1,12 @@
-$error: #e53d3d;
-$light-border: #eaeaea;
-$black: #000;
-$secondary: #606674;
-$light: #ccc;
-$main: #2f80ed;
-$white: #fff;
+@import url(../../styles/variables.scss);
 
 .chat {
   box-sizing: border-box;
   display: flex;
   padding: 10px 0;
   margin: 0 10px;
-  border-top: 1px solid $light-border;
-  border-bottom: 1px solid $light-border;
+  border-top: 1px solid var(--light-border);
+  border-bottom: 1px solid var(--light-border);
 
   &:hover {
     opacity: 0.8;
@@ -21,7 +15,7 @@ $white: #fff;
   }
 
   &__title {
-    color: $secondary;
+    color: var(--secondary);
     font-size: 14px;
     line-height: 1;
     font-weight: 600;
@@ -41,7 +35,7 @@ $white: #fff;
   }
 
   &__time {
-    color: $light;
+    color: var(--light);
     font-size: 10px;
     font-weight: 500;
     line-height: 12px;
@@ -50,15 +44,15 @@ $white: #fff;
   &__count {
     padding: 6px;
     border-radius: 999px;
-    background-color: $main;
-    color: $white;
+    background-color: var(--main);
+    color: var(--white);
     font-size: 10px;
     font-weight: 500;
     line-height: 12px;
   }
 
   &__text {
-    color: $light;
+    color: var(--light);
     font-size: 12px;
     line-height: 14px;
     margin-top: 4px;
@@ -70,8 +64,8 @@ $white: #fff;
   display: flex;
   padding: 10px 0;
   margin: 0 10px;
-  border-top: 1px solid $light-border;
-  border-bottom: 1px solid $light-border;
+  border-top: 1px solid var(--light-border);
+  border-bottom: 1px solid var(--light-border);
 
   &:hover {
     opacity: 0.8;
@@ -80,7 +74,7 @@ $white: #fff;
   }
 
   &__title {
-    color: $secondary;
+    color: var(--secondary);
     font-size: 14px;
     line-height: 1;
     font-weight: 600;
@@ -100,7 +94,7 @@ $white: #fff;
   }
 
   &__time {
-    color: $light;
+    color: var(--light);
     font-size: 10px;
     font-weight: 500;
     line-height: 12px;
@@ -109,15 +103,15 @@ $white: #fff;
   &__count {
     padding: 6px;
     border-radius: 999px;
-    background-color: $main;
-    color: $white;
+    background-color: var(--main);
+    color: var(--white);
     font-size: 10px;
     font-weight: 500;
     line-height: 12px;
   }
 
   &__text {
-    color: $light;
+    color: var(--light);
     font-size: 12px;
     line-height: 14px;
     margin-top: 4px;

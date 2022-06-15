@@ -1,16 +1,14 @@
-import { Block } from '../../core';
-import { InputProps } from './Input.types';
+import { Block } from "../../core";
+import { InputProps } from "./Input.types";
 
 export default class Input extends Block {
-  static componentName = 'Input';
+  static componentName = "Input";
 
-  constructor({
-    onBlur, onClick, onInput, ...props
-  }: InputProps) {
+  constructor({ onBlur, onFocus, onInput, ...props }: InputProps) {
     super({
       ...props,
       events: {
-        click: onClick,
+        focus: onFocus,
         blur: onBlur,
         input: onInput,
       },

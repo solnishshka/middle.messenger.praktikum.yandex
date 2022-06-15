@@ -1,8 +1,4 @@
-$light-border: #eaeaea;
-$secondary: #606674;
-$light: #ccc;
-$main: #2f80ed;
-$white: #fff;
+@import url(../../styles/variables.scss);
 
 .message {
   position: relative;
@@ -20,18 +16,18 @@ $white: #fff;
   }
 
   &_type_image {
-      background: inherit;
-      padding: 0;
-      overflow: hidden;
-      border-radius: 10px;
-      border: 1px solid $light-border;
+    background: inherit;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--light-border);
   }
 
   &_type_image time {
     padding: 4px;
     border-radius: 5px;
-    background-color: $white;
-    color: $secondary;
+    background-color: var(--white);
+    color: var(--secondary);
   }
 
   &__time {
@@ -39,17 +35,17 @@ $white: #fff;
     bottom: 10px;
     right: 10px;
     font-size: 9px;
-    color: $light;
+    color: var(--light);
   }
 
   &_type_my time {
-    color: $main;
+    color: var(--main);
   }
 
   &__status {
-      position: absolute;
-      bottom: 12px;
-      right: 40px;
+    position: absolute;
+    bottom: 12px;
+    right: 40px;
   }
 
   &__image {

@@ -11,8 +11,7 @@ export default class Register extends Block {
     super({
       ...props,
       inputs: formConfig,
-      onSubmit: (evt: Event) => {
-        evt.preventDefault();
+      onSubmit: () => {
         if (!this.element) {
           return;
         }

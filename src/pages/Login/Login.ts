@@ -14,8 +14,7 @@ export default class Login extends Block {
       linkText: 'Еще не зарегистрированы?',
       linkHref: '/register',
       inputs: formConfig,
-      onSubmit: (evt: Event) => {
-        evt.preventDefault();
+      onSubmit: () => {
         if (!this.element) {
           return;
         }

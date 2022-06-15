@@ -1,12 +1,8 @@
-$light-border: #eaeaea;
-$secondary: #606674;
-$light: #ccc;
-$main: #2f80ed;
-$white: #fff;
+@import url(../../styles/variables.scss);
 
 .compose {
   &__empty-text {
-    color: $light;
+    color: var(--light);
     font-size: 12px;
     line-height: 14px;
   }
@@ -19,7 +15,7 @@ $white: #fff;
     height: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: $white;
+    background-color: var(--white);
     padding: 0 20px 0 10px;
   }
 
@@ -34,11 +30,11 @@ $white: #fff;
   &__header {
     width: 100%;
     min-height: 62px;
-    border-bottom: 1px solid $light-border;
+    border-bottom: 1px solid var(--light-border);
     position: fixed;
     top: 0;
     left: 331px;
-    background-color: $white;
+    background-color: var(--white);
     z-index: 2222;
     box-sizing: border-box;
     padding: 0 20px 0 10px;
@@ -51,10 +47,10 @@ $white: #fff;
     left: 331px;
     width: 100%;
     min-height: 64px;
-    border-top: 1px solid $light-border;
+    border-top: 1px solid var(--light-border);
     padding: 0 42px 0 30px;
     justify-content: center;
-    background-color: $white;
+    background-color: var(--white);
   }
 
   &__user-info {
@@ -64,7 +60,7 @@ $white: #fff;
   }
 
   &__user-name {
-    color: $secondary;
+    color: var(--secondary);
     font-size: 16px;
     line-height: 16px;
     font-weight: 500;
@@ -101,7 +97,7 @@ $white: #fff;
   &__input-field {
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid $light-border;
+    border: 1px solid var(--light-border);
     min-height: 40px;
     border-radius: 10px;
     padding-left: 20px;

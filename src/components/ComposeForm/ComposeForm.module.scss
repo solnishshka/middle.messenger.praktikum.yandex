@@ -1,8 +1,4 @@
-$light-border: #eaeaea;
-$secondary: #606674;
-$light: #ccc;
-$main: #2f80ed;
-$white: #fff;
+@import url(../../styles/variables.scss);
 
 .compose-form {
   width: 100%;
@@ -34,7 +30,7 @@ $white: #fff;
   &__input-field {
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid $light-border;
+    border: 1px solid var(--light-border);
     min-height: 40px;
     border-radius: 10px;
     padding-left: 20px;

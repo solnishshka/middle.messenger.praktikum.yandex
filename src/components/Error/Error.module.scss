@@ -1,7 +1,7 @@
-$error: #e53d3d;
+@import url(../../styles/variables.scss);
 
 .error {
-  color: $error;
+  color: var(--error-color);
   font-size: 10px;
   position: absolute;
   bottom: 0px;

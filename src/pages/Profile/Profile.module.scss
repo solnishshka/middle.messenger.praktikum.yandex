@@ -1,9 +1,4 @@
-$error: #e53d3d;
-$light-border: #eaeaea;
-$black: #000;
-$secondary: #606674;
-$light: #ccc;
-$main: #2f80ed;
+@import url(../../styles/variables.scss);
 
 .container {
   display: grid;
@@ -15,7 +10,7 @@ $main: #2f80ed;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid $light-border;
+  border-right: 1px solid var(--light-border);
 }
 
 .actions {
@@ -26,7 +21,7 @@ $main: #2f80ed;
   &__item {
     margin: 25px;
     text-decoration: none;
-    color: $error;
+    color: var(--error-color);
     font-weight: 500;
 
     &:hover {
@@ -50,7 +45,7 @@ $main: #2f80ed;
     right: 0;
     bottom: 0;
     display: none;
-    background: $black;
+    background: var(--black);
     opacity: 0.5;
   }
 
@@ -73,7 +68,7 @@ $main: #2f80ed;
   margin-bottom: 50px;
   font-size: 24px;
   line-height: 26px;
-  color: $secondary;
+  color: var(--secondary);
   font-weight: 700;
 }
 
@@ -100,8 +95,8 @@ $main: #2f80ed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $light-border;
-    color: $secondary;
+    border-bottom: 1px solid var(--light-border);
+    color: var(--secondary);
     flex-direction: row-reverse;
 
     &:last-child {
@@ -112,22 +107,22 @@ $main: #2f80ed;
   &__input {
     border: none;
     text-align: right;
-    color: $light;
+    color: var(--light);
   }
 }
 
 .change-actions {
   width: 100%;
   min-height: 33px;
-  border-top: 1px solid $light-border;
-  border-bottom: 1px solid $light-border;
+  border-top: 1px solid var(--light-border);
+  border-bottom: 1px solid var(--light-border);
   display: flex;
   justify-content: space-between;
 
   &__button {
     border: none;
     background-color: inherit;
-    color: $main;
+    color: var(--main);
     font-weight: 600;
 
     &:hover {
