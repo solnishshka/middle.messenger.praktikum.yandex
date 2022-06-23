@@ -9,7 +9,7 @@ import { chats } from './mock';
 export default class ChatList extends Block {
   static componentName = 'ChatList';
 
-  private _currentChatId?: string | null;
+  private _currentChatId?: Nullable<string>;
 
   constructor(props: ChatListProps) {
     super({
@@ -18,7 +18,7 @@ export default class ChatList extends Block {
         ...chat,
         // TODO - реализовать нормальную передачу колбека для выбора активного чата
         onClick: (evt: Event) => {
-          const activeChatElement = (evt.target as HTMLElement | null)?.closest(
+          const activeChatElement = (evt.target as Nullable<HTMLElement>)?.closest(
             '.chat',
           );
 

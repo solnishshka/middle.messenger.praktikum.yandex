@@ -21,11 +21,7 @@ export default class ControlledInput extends Block {
 
         if (validationRule && errorElement) {
           const errorText = validateValue(validationRule, value);
-          if (errorText !== "") {
-            this.isValid = false;
-          } else {
-            this.isValid = true;
-          }
+          this.isValid = errorText === "";
           errorElement.setProps({ errorText });
         }
       },

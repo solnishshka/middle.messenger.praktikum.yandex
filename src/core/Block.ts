@@ -19,7 +19,7 @@ export default class Block {
 
   public id = nanoid(6);
 
-  private _element: HTMLElement | null = null;
+  private _element: Nullable<HTMLElement> = null;
 
   protected refs?: Record<string, Block> = {};
 
@@ -143,7 +143,7 @@ export default class Block {
     return "";
   }
 
-  getContent(): HTMLElement | null {
+  getContent(): Nullable<HTMLElement> {
     return this.element;
   }
 

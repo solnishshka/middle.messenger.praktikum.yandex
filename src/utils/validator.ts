@@ -53,7 +53,7 @@ export function validateValue(rule: ValidationRule, value: string) {
       return '';
 
     case ValidationRule.Phone:
-      if (!new RegExp(/^\+{0,1}[0-9]{10,15}$/g)) {
+      if (!new RegExp(/^\+{0,1}[0-9]{10,15}$/g).test(value)) {
         return 'Невалидный номер телефона';
       }
       return '';

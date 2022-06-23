@@ -1,7 +1,7 @@
 export const getFormValues = (container: HTMLElement) => Array.from(
   (container?.querySelectorAll(
     'input',
-  ) as NodeListOf<HTMLInputElement> | null) ?? [],
+  ) as Nullable<NodeListOf<HTMLInputElement>>) ?? [],
 ).reduce((acc, curr: { name: string; value: unknown }) => {
   acc[curr.name] = curr.value;
   return acc;
