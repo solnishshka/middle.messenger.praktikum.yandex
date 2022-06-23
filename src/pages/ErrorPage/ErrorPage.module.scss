@@ -1,0 +1,42 @@
+@import url(../../styles/variables.scss);
+
+.container {
+  background-image: url(../../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 260px;
+  margin-bottom: 40px;
+  font-size: 60px;
+  line-height: 64px;
+  color: var(--main);
+}
+
+.text {
+  margin-bottom: 200px;
+  color: var(--light);
+  font-size: 24px;
+  max-width: 690px;
+  text-align: center;
+}
+
+.link {
+  color: var(--white);
+  background-color: var(--main);
+  text-decoration: none;
+  padding: 16px 60px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.link:hover {
+  opacity: 0.7;
+}

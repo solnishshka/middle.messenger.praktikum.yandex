@@ -1,0 +1,86 @@
+@import url(../../styles//variables.scss);
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px 30px;
+  border: 1px solid rgb(204 204 204 / 50%);
+  border-radius: 12px;
+  position: relative;
+
+  &__label {
+    display: block;
+    transform: translateY(-28px) translateX(4px);
+    transition: 0.1s ease 0.1s;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--light);
+    font-weight: 500;
+    cursor: text;
+  }
+
+  &__input:focus~&__label,
+  &__input:valid~&__label {
+    transform: translateY(-48px) translateX(-24px) scale(0.8);
+  }
+
+  &__title {
+    color: var(--main);
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    width: 280px;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    padding: 25px 0 10px 4px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--main);
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1;
+      color: var(--light);
+      font-weight: 500;
+    }
+
+    &:focus {
+      background-color: rgb(204 204 204 / 20%);
+    }
+  }
+
+  &__button {
+    margin-top: 60px;
+    background-color: var(--main);
+    color: var(--white);
+    border: none;
+    padding: 12px 118px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__link {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--main);
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

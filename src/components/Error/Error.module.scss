@@ -1,0 +1,9 @@
+@import url(../../styles/variables.scss);
+
+.error {
+  color: var(--error-color);
+  font-size: 10px;
+  position: absolute;
+  bottom: 0px;
+  left: 4px;
+}
